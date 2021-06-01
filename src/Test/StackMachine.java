@@ -616,6 +616,14 @@ public class StackMachine {
 			op = change_type_double(lexema, token);
 		break;
 		
+		case("INTEGER_MINUS"):
+			op = change_type_double(lexema.substring(1, lexema.length()-1), token);
+		break;
+		
+		case("REAL_MINUS"):
+			op = change_type_double(lexema.substring(1, lexema.length()-1), token);
+		break;
+		
 			
 			
 		case("IDENTIFIER"):
