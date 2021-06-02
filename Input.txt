@@ -63,9 +63,9 @@ c = (a+b*3/158)/15;
 print(c);
 
 LinkedList list;
-
-
-
+LinkedList list1;
+LinkedList list3;
+LinkedList list5;
 addLast(1, list);
 addLast(2, list);
 addLast(3, list);
@@ -77,6 +77,38 @@ remove(B, list);
 addFirst (ThisIsHead, list);
 PrintList(list);
 
+if (11 < 10) {
+
+print(5005);
+
+}
+
+else {
+
+print(1000);
+
+}
+
+c = 5 + (-1000);
+print(c);
+
+if(5 > 10) {
+
+	print(55);
+
+}
+
+else {
+
+	if( 11 > 10) {
+	print('ABC');
+	if (15 > 10) {
+
+	print ('abc');
+	}
+}
+
+}
 
 
 } 

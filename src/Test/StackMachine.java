@@ -30,7 +30,7 @@ public class StackMachine {
 	}
 	
 	public void stack() {
-	
+		
 		//notation_copy = (LinkedList<String>) notation.clone();
 		while (notation.size() > i) {
 			stack_check();
@@ -119,6 +119,10 @@ public class StackMachine {
 			case ("do"):
 				do_while_check();
 			break;
+			
+			case("else"):
+				i++;
+				break;
 			
 			case ("{"):
 				i ++;
@@ -642,7 +646,13 @@ public class StackMachine {
 				op = change_type_double(Op, token);
 			break;
 			
+			case("INTEGER_MINUS"):
+				op = change_type_double(lexema.substring(1, lexema.length()-1), token);
+			break;
 			
+			case("REAL_MINUS"):
+				op = change_type_double(lexema.substring(1, lexema.length()-1), token);
+			break;
 			
 				default:
 					break;
@@ -788,6 +798,18 @@ public class StackMachine {
 		stack.removeLast();
 		stack_tokens.removeLast();
 		i++;
+		
+	}
+	
+	public void print_table_var() {
+		
+		System.out.println(TableVar);
+		
+	}
+	
+	public void print_table_list() {
+		
+		System.out.println(TableList);
 		
 	}
 	

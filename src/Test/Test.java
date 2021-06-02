@@ -1,6 +1,7 @@
 package Test;
 
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -12,14 +13,14 @@ public class Test {
 		final String dir = System.getProperty("user.dir");
 		Lexer lexer = new Lexer(dir + "\\Input.txt");
 		
-       // System.out.println("-----------------");
+       System.out.println("-----------------");
         
         while (!lexer.isExhausted()) {
-           // System.out.printf("%-10s : %s \n", lexer.currentLexema(), lexer.currentToken());
+         System.out.printf("%-10s : %s \n", lexer.currentLexema(), lexer.currentToken());
             lexer.moveAhead();
         }
         
-        //System.out.println("-----------------");
+      System.out.println("-----------------");
         
         
         
@@ -53,8 +54,8 @@ public class Test {
         }
         
         rpn.rpn();
-        //rpn.print_rpn();
-        //System.out.println();
+       rpn.print_rpn();
+        System.out.println();
         //rpn.print_rpn_tok();
         //System.out.println();
         LinkedList<String> notation = new LinkedList<>();
@@ -70,9 +71,13 @@ public class Test {
         	
         }
         stack.stack();
+        System.out.println("Таблица переменных:");
+		stack.print_table_var();
+		System.out.println("Таблица списков:");
+		stack.print_table_list();
         System.out.println("Done");
         
-        DoubleLinkedList <String> check_list = new DoubleLinkedList<>();
+        //DoubleLinkedList <String> check_list = new DoubleLinkedList<>();
         /*check_list.addFirst("Um");
         check_list.addLast("1");
         check_list.addLast("2");
